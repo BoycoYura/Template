@@ -18,8 +18,8 @@ var useref = require('gulp-useref'),
 		ftp = require('vinyl-ftp');
 
 var paths = {
-			blocks: 'blocks/',
-			devDir: 'app/',
+			blocks: 'elements/',
+			devDir: 'pages/',
 			outputDir: 'build/'
 		};
 
@@ -27,15 +27,6 @@ var paths = {
 /*********************************
 		Developer tasks
 *********************************/
-
-//pug compile
-gulp.task('pug', function() {
-	return gulp.src([paths.blocks + '*.pug', '!' + paths.blocks + 'template.pug' ])
-		.pipe(plumber())
-		.pipe(pug({pretty: true}))
-		.pipe(gulp.dest(paths.devDir))
-		.pipe(browserSync.stream())
-});
 
 //sass compile
 gulp.task('sass', function() {
@@ -63,7 +54,6 @@ gulp.task('scripts', function() {
 
 //watch
 gulp.task('watch', function() {
-	gulp.watch(paths.blocks + '**/*.pug', ['pug']);
 	gulp.watch(paths.blocks + '**/*.sass', ['sass']);
 	gulp.watch(paths.blocks + '**/*.js', ['scripts']);
 });
@@ -134,7 +124,7 @@ gulp.task('send', function() {
 
 
 //default
-gulp.task('default', ['browser-sync', 'watch', 'pug', 'sass', 'scripts']);
+gulp.task('default', ['browser-sync', 'watch', 'sass', 'scripts']);
 
 //production
 gulp.task('prod', ['build', 'imgBuild', 'fontsBuild']);
