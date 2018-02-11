@@ -1,0 +1,19 @@
+h1{
+	color: $primary-color;
+}
+
+
+
+.example{
+	height: 300px;
+	width: 200px;
+	@include box-shadow(0px,-33px,40px,0px,rgba(0,137,207,1));//Basic-chadow
+
+	&_main-header{
+		color: $primary-color;
+		font-family: $basic-font-bold;
+		font-size: $basic-header-size;
+		text-transform: uppercase;
+		@include gradient(#E12222, #711111);//Basic-gradient
+	}
+}

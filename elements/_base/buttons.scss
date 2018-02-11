@@ -1,0 +1,10 @@
+.main-btn{
+  color: $text-color-main;
+  font-family: $basic-font-regular;
+  @include gradient(#E12222, #711111);
+  cursor: pointer;
+}
+
+.btn-call{
+  padding: 15px;
+}

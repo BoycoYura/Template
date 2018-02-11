@@ -30,7 +30,7 @@ var paths = {
 
 //sass compile
 gulp.task('sass', function() {
-	return gulp.src(paths.blocks + '*.sass')
+	return gulp.src(paths.blocks + '*.scss')
 		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(prefix({
@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
 
 //watch
 gulp.task('watch', function() {
-	gulp.watch(paths.blocks + '**/*.sass', ['sass']);
+	gulp.watch(paths.blocks + '**/*.scss', ['sass']);
 	gulp.watch(paths.blocks + '**/*.js', ['scripts']);
 });
 

@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Gothic font';
+  src: url("../fonts/CenturyGothic-Bold.ttf") format("ttf"), url("../fonts/CenturyGothic-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gothic Italic';
+  src: url("../fonts/CenturyGothic-Italic.ttf") format("ttf"), url("../fonts/CenturyGothic-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Gothic Regular';
+  src: url("../fonts/CenturyGothic.ttf") format("ttf"), url("../fonts/CenturyGothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,8 +32,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -44,20 +60,44 @@ table {
 a {
   text-decoration: none; }
 
-/***********************MEDIA QUERIES***********************/
-/***********************COLORS & FONTS***********************/
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-Medium.ttf");
-  font-style: normal;
-  font-weight: 500; }
+.main-btn {
+  color: white;
+  font-family: "Gothic Regular", sans-serif;
+  /* fallback/image non-cover color */
+  background-color: #E12222;
+  /* Firefox 3.6+ */
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E12222), to(#711111));
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient(#E12222, #711111);
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient(#E12222, #711111);
+  cursor: pointer; }
 
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato/Lato-Heavy.ttf");
-  font-style: normal;
-  font-weight: 900; }
+.btn-call {
+  padding: 15px; }
 
 h1 {
-  color: red;
-  font-size: 40px; }
+  color: #0089CF; }
+
+.example {
+  height: 300px;
+  width: 200px;
+  /* Safari 5.1+, Chrome 10+ */
+  /* Firefox 3.6+ */
+  /* Firefox 3.6+ */
+  box-shadow: 0px -33px 40px 0px #0089cf; }
+  .example_main-header {
+    color: #0089CF;
+    font-family: "Gothic font", sans-serif;
+    font-size: 70px;
+    text-transform: uppercase;
+    /* fallback/image non-cover color */
+    background-color: #E12222;
+    /* Firefox 3.6+ */
+    /* Safari 4+, Chrome 1+ */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E12222), to(#711111));
+    /* Safari 5.1+, Chrome 10+ */
+    background-image: -webkit-linear-gradient(#E12222, #711111);
+    /* Opera 11.10+ */
+    background-image: -o-linear-gradient(#E12222, #711111); }
